@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="ru" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
+<link rel="stylesheet" href="/css/admin.css">
+<nav class="navigation-panel">
+    <button type="button" name="gallery">Галерея</button>
+    <button type="button" name="video">Видео</button>
+    <button type="button" name="text">Тексты</button>
+</nav>
+<div class="main-content">
+    <div class="gallery">
+        <div class="drag-n-drop">
+            <span>Перетащите фотографии или нажмите здесь</span>
+        </div>
+        {{#each imgArr}}
+            <div class="imageBlock">
+                <div class="cross">
 
-    </body>
-</html>
+                </div>
+                <img src="{{this.imgPath}}" alt="">
+            </div>
+        {{/each}}
+    </div>
+    <div class="video">
+        <button type="button" name="addVideo">+ Добавить видео</button>
+        <div class="video-preview">
+            <video src="" controls>
+
+            </video>
+        </div>
+    </div>
+    <div class="text">
+        А что тут?
+    </div>
+</div>

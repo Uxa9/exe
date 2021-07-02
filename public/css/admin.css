@@ -1,0 +1,54 @@
+.navigation-panel {
+  width: 100%;
+  height: 70px;
+  background-color: #FF2975;
+  display: flex; }
+  .navigation-panel button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    transition: all .5s; }
+    .navigation-panel button:hover {
+      color: #5100B8; }
+
+.main-content {
+  padding: 40px;
+  display: flex;
+  align-items: center; }
+
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px; }
+  .gallery .drag-n-drop {
+    padding: 20px;
+    border: 2px dashed #000000;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center; }
+  .gallery .imageBlock img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .gallery > div {
+    max-width: 300px;
+    height: 200px;
+    justify-self: center; }
+
+.video {
+  display: none; }
+
+.text {
+  display: none; }
+
+@media screen and (max-width: 350px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+    .gallery > div {
+      height: 160px; } }

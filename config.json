@@ -1,0 +1,6 @@
+{
+    "ServerPort" : 4000,
+
+    "login"      : "admin",
+    "password"   : "$2a$12$.32MAolNDBJGmTtv9cuHGeaP44Qj6yXSPxxXHI3C9T/oj8qKu1OFi"
+}

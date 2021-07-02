@@ -1,9 +1,18 @@
-<form class="auth-form" action="index.html" method="post">
+<link rel="stylesheet" href="/css/auth.css">
+<form id="authForm" class="auth-form" action="settings" method="post">
     <div class="auth-fields">
-        <label for="login">Логин</label>
-        <input type="text" name="login" placeholder="Введите логин...">
-        <label for="password">Пароль</label>
-        <input type="password" name="password" placeholder="Введите пароль...">
+        <div class="field">
+            <label for="login">Логин</label>
+            <input id="login" type="text" name="login" placeholder="Введите логин...">
+        </div>
+        <div class="field">
+            <label for="password">Пароль</label>
+            <input id="password" type="password" name="password" placeholder="Введите пароль...">
+        </div>
     </div>
-    <input class="button" type="submit" value="Войти">
+    <button class="button submit-button" type="submit">Войти</button>
 </form>
+<div id="popUp" class="pop-up">
+    <span></span>
+</div>
+<script src="/js/auth.js"></script>

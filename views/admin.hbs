@@ -1,18 +1,24 @@
 <link rel="stylesheet" href="/css/admin.css">
 <nav class="navigation-panel">
-    <button type="button" name="gallery">Галерея</button>
+    <button class="active" type="button" name="gallery">Галерея</button>
     <button type="button" name="video">Видео</button>
     <button type="button" name="text">Тексты</button>
 </nav>
 <div class="main-content">
     <div class="gallery">
-        <div class="drag-n-drop">
-            <span>Перетащите фотографии или нажмите здесь</span>
+        <div id="dropArea" class="drag-n-drop">
+            <form class="dnd-form">
+                <span>Перетащите фотографии или нажмите здесь</span>
+                <input type="file" id="fileElem" multiple accept="image/*">
+                <label class="dnd-button" for="fileElem">Выбрать изображения</label>
+            </form>
         </div>
         {{#each imgArr}}
             <div class="imageBlock">
-                <div class="cross">
+                <div class="cross-hover">
+                    <div class="cross">
 
+                    </div>
                 </div>
                 <img src="{{this.imgPath}}" alt="">
             </div>

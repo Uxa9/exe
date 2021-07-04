@@ -5,13 +5,14 @@
     <button type="button" name="text">Тексты</button>
 </nav>
 <div class="main-content">
-    <div class="gallery">
+    <div id="gallery" class="gallery">
         <div id="dropArea" class="drag-n-drop">
             <form class="dnd-form">
                 <span>Перетащите фотографии или нажмите здесь</span>
                 <input type="file" id="fileElem" multiple accept="image/*">
                 <label class="dnd-button" for="fileElem">Выбрать изображения</label>
             </form>
+            <progress class="progress-bar" id="progress-bar" max=100 value=0></progress>
         </div>
         {{#each imgArr}}
             <div class="imageBlock">
@@ -19,20 +20,43 @@
                     <div class="cross">
 
                     </div>
+                    <span hidden>{{this.imgPath}}</span>
                 </div>
                 <img src="{{this.imgPath}}" alt="">
             </div>
         {{/each}}
     </div>
-    <div class="video">
-        <button type="button" name="addVideo">+ Добавить видео</button>
+    <div id="video" preload="none" class="video">
+        <div class="videoTools">
+            <input id="videoInput" hidden type="file" accept="video/*" placeholder="+ Добавить видео">
+            <button id="videoButton" class="button" type="button" name="addVideo">
+                + Добавить видео
+            </button>
+        </div>
         <div class="video-preview">
-            <video src="" controls>
+            <video src="/video/video.mp4" controls>
 
             </video>
         </div>
     </div>
-    <div class="text">
+    <div id="text" class="text">
         А что тут?
     </div>
 </div>
+
+<template id="imageBlockTemplate">
+    <div class="imageBlock">
+        <div class="cross-hover">
+            <div class="cross">
+
+            </div>
+            <span hidden></span>
+        </div>
+        <img src="" alt="">
+    </div>
+</template>
+
+<script src="js/admin.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/video.js"></script>
+<script src="js/text.js"></script>

@@ -1,0 +1,217 @@
+<nav>
+    <a href="/">
+        <img src="/img/landing/logo.svg" alt="lounge logo">
+    </a>
+
+    <div class="nav-links">
+        <a href="#firstScreen">Главная</a>
+        <a href="#offersScreen">Услуги</a>
+        <a href="#galleryScreen">Галерея</a>
+        <a href="#streamerScreen">Стриминг</a>
+        <a href="#contactsScreen">Контакты</a>
+    </div>
+</nav>
+<section id="firstScreen" class="first-screen">
+    <div class="firstScreen__content">
+        <h1>
+            <p>Cyber lounge</p>
+            <p>
+                <img src="/img/landing/logo.svg" alt="lounge logo">
+            </p>
+        </h1>
+        <button class="button trapezoid-button" type="button" name="button">
+            <span>
+                Забронировать место
+            </span>
+            <div class="button button-normal">
+
+            </div>
+            <div class="button button-skewed">
+
+            </div>
+        </button>
+    </div>
+    <div class="main-image">
+        <img class="glitch" src="" alt="">
+        <img src="/img/landing/mainImage.png" alt="">
+    </div>
+    <div class="parallelograms">
+        <div class="parallelogram parallelogram-pink bg-parallelogram">
+
+        </div>
+        <div class="parallelogram parallelogram-pink bg-parallelogram-small">
+
+        </div>
+    </div>
+</section>
+<section id="offersScreen" class="offers-screen">
+    <h2>Услуги</h2>
+    <div class="offers">
+        <div class="offers__offer">
+            <img src="/img/landing/games.svg" alt="games">
+            <div class="offers__offer__text">
+                <p>Игры</p>
+                <p>6 консолей нового поколения</p>
+                <p>25 компьютеров с топовым железом</p>
+            </div>
+        </div>
+        <div class="offers__offer">
+            <img src="/img/landing/bar.svg" alt="bar">
+            <div class="offers__offer__text">
+                <p>Бар</p>
+                <p>эксклюзивные коктейли заведения</p>
+                <p>прохладительные и горячие напитки</p>
+            </div>
+        </div>
+        <div class="offers__offer">
+            <img src="/img/landing/hookah.svg" alt="hookah">
+            <div class="offers__offer__text">
+                <p>Кальян</p>
+                <p>огромный ассортимент различных табаков на любой вкус</p>
+            </div>
+        </div>
+        <div class="offers__offer">
+            <img src="/img/landing/promo.svg" alt="promo">
+            <div class="offers__offer__text">
+                <p>Акции</p>
+                <p>2 кальяна по цене 2200 рублей</p>
+                <p>при заказе кальяна за пк 1 час игры в подарок</p>
+            </div>
+        </div>
+    </div>
+    <div class="parallelograms-pink">
+        <div class="parallelogram parallelogram-pink parallelogram-big">
+
+        </div>
+        <div class="parallelogram parallelogram-pink parallelogram-small">
+
+        </div>
+    </div>
+</section>
+<section id="galleryScreen" class="gallery-screen">
+    <h2>Галерея</h2>
+    <div class="items">
+        {{#each imgArr}}
+            <div class=" item">
+                <img src="{{this.imgPath}}" alt="image">
+            </div>
+        {{/each}}
+		<div class="button-container">
+			<div class="gallery-button">
+                <div class="arrow">
+
+                </div>
+            </div>
+			<div class="gallery-button">
+                <div class="arrow">
+
+                </div>
+            </div>
+		</div>
+	</div>
+    <div class="parallelograms-pink">
+        <div class="parallelogram parallelogram-pink parallelogram-big">
+
+        </div>
+        <div class="parallelogram parallelogram-pink parallelogram-small">
+
+        </div>
+    </div>
+</section>
+<section id="streamerScreen" class="streamer-screen">
+    <h2>Хотите стать стримером или уже ведете трансляции? Станьте нашим партнером?</h2>
+    <div class="streamer-screen__content">
+        <button class="button" type="button" name="button">Присоединиться</button>
+        <div class="video">
+            <video src="/video/video.mp4" controls>
+
+            </video>
+        </div>
+    </div>
+    <div class="parallelograms-pink">
+        <div class="parallelogram parallelogram-pink parallelogram-big">
+
+        </div>
+        <div class="parallelogram parallelogram-pink parallelogram-small">
+
+        </div>
+    </div>
+</section>
+<section id="contactsScreen" class="contacts-screen">
+    <h2>Контакты</h2>
+    <div class="contacts-screen__content">
+        <div class="contacts-screen__content__info-and-links">
+            <div class="info">
+                <div class="info__row">
+                    <img src="/img/landing/phone.svg" alt="">
+                    <span>+7 (965) 347-54-45</span>
+                </div>
+                <div class="info__row">
+                    <img src="/img/landing/adress.svg" alt="">
+                    <span>Профсоюзная улица, 104</span>
+                </div>
+                <div class="info__row">
+                    <img src="/img/landing/time.svg" alt="">
+                    <div>
+                        <p>Пн-чт: 14:00-23:00</p>
+                        <p>Пт-вс: 14:00-23:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <a href="https://www.instagram.com/exe.gaming.msk/">
+                    <img src="/img/landing/Insta.svg" alt="insta logo">
+                </a>
+                <a href="https://vk.com/msk.exegaming">
+                    <img src="/img/landing/vk.svg" alt="vk logo">
+                </a>
+                <a href="https://www.twitch.tv/exe_gaming_msk">
+                    <img src="/img/landing/Twitch.svg" alt="twitch logo">
+                </a>
+                <a href="https://www.youtube.com/channel/UCHBVipFWUmg9kpEmy0urXBg/featured">
+                    <img src="/img/landing/Youtube.svg" alt="youtube logo">
+                </a>
+            </div>
+        </div>
+        <div class="map">
+            <div class="map-wrapper">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad248edede446f7684c0f1258e6b605f350dafe8a6b5d23b06d0ab34a51e30ce1&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </div>
+    </div>
+    <div class="parallelograms-pink">
+        <div class="parallelogram parallelogram-pink parallelogram-big">
+
+        </div>
+        <div class="parallelogram parallelogram-pink parallelogram-small">
+
+        </div>
+    </div>
+</section>
+<div class="background-parallelograms">
+    <div class="parallelogram parallelogram-gradient">
+
+    </div>
+    <div class="parallelogram parallelogram-gradient">
+
+    </div>
+    <div class="parallelogram parallelogram-gradient">
+
+    </div>
+    <div class="parallelogram parallelogram-gradient">
+
+    </div>
+    <div class="parallelogram parallelogram-gradient">
+
+    </div>
+    <div class="parallelogram parallelogram-gradient">
+
+    </div>
+    <div class="parallelogram parallelogram-gradient">
+
+    </div>
+    <div class="parallelogram parallelogram-gradient">
+
+    </div>
+</div>
+<script src="/js/landing.js"></script>

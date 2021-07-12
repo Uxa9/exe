@@ -99,7 +99,19 @@ app.post("/uploadVideo", upload.single("video"), (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.render("landing");
+    let image = [];
+    let imagesArray = [];
+
+    fs.readdirSync("./public/img/gallery").forEach(file => {
+      image = {
+          imgPath: "/img/gallery/" + file
+      };
+      imagesArray.push(image);
+    });
+
+    res.render("landing", {
+        imgArr : imagesArray
+    });
 });
 
 app.get("*", (req, res) => {

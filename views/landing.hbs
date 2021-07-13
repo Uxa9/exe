@@ -165,31 +165,31 @@
             <div class="info">
                 <div class="info__row">
                     <img src="/img/landing/phone.svg" alt="">
-                    <span>+7 (965) 347-54-45</span>
+                    <span>{{textArr.phone}}</span>
                 </div>
                 <div class="info__row">
                     <img src="/img/landing/adress.svg" alt="">
-                    <span>Профсоюзная улица, 104</span>
+                    <span>{{textArr.adress}}</span>
                 </div>
                 <div class="info__row">
                     <img src="/img/landing/time.svg" alt="">
                     <div>
-                        <p>Пн-чт: 14:00-23:00</p>
-                        <p>Пт-вс: 14:00-23:00</p>
+                        <p>{{textArr.workHoursFirst}}</p>
+                        <p>{{textArr.workHoursSecond}}</p>
                     </div>
                 </div>
             </div>
             <div class="links">
-                <a href="https://www.instagram.com/exe.gaming.msk/">
+                <a id="instaLink" href={{textArr.insta}}>
                     <img src="/img/landing/Insta.svg" alt="insta logo">
                 </a>
-                <a href="https://vk.com/msk.exegaming">
+                <a href={{textArr.vk}}>
                     <img src="/img/landing/vk.svg" alt="vk logo">
                 </a>
-                <a href="https://www.twitch.tv/exe_gaming_msk">
+                <a id="twitchLink" href={{textArr.twitch}}>
                     <img src="/img/landing/Twitch.svg" alt="twitch logo">
                 </a>
-                <a href="https://www.youtube.com/channel/UCHBVipFWUmg9kpEmy0urXBg/featured">
+                <a href={{textArr.yt}}>
                     <img src="/img/landing/Youtube.svg" alt="youtube logo">
                 </a>
             </div>

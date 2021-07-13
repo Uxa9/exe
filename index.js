@@ -1,6 +1,7 @@
 const express    = require('express');
 const path       = require('path');
 const config     = require('./config.json');
+const textFields = require('./textFields.json');
 const bcrypt     = require('bcryptjs');
 const bodyParser = require('body-parser');
 const fs         = require('fs');
@@ -52,7 +53,7 @@ app.post("/settings", async (req, res) => {
 
     res.render("admin", {
         imgArr  : imagesArray,
-        textArr : config.textFields
+        textArr : textFields
     });
 });
 
@@ -69,9 +70,12 @@ app.post("/login", async (req, res) => {
 
 app.post("/updateText", async (req, res) => {
     try {
-        config.textFields = req.body.textFields;
+        fs.writeFile("./textFields.json", JSON.stringify(req.body.textFields), (err) => {
+            if (err) throw(err);
+        })
         res.send(200);
     } catch (e) {
+        console.log(e);
         res.send(400);
     }
 });
@@ -120,7 +124,8 @@ app.get("/", (req, res) => {
     });
 
     res.render("landing", {
-        imgArr : imagesArray
+        imgArr : imagesArray,
+        textArr : textFields
     });
 });
 

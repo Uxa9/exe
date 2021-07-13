@@ -53,11 +53,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.getElementById('reserveButton').onclick = () => {
-	window.open("https://www.instagram.com/exe.gaming.msk/");
+	document.getElementById('instaLink').click();
 }
 
 document.getElementById('streamerButton').onclick = () => {
-	window.open("https://www.twitch.tv/exe_gaming_msk");
+	document.getElementById('twitchLink').click();
 }
 
 

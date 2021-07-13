@@ -18,11 +18,11 @@ document.getElementById('saveText').onclick = async () => {
         textFields : {
             "phone"           : document.getElementsByName('phone')[0].value,
             "adress"          : document.getElementsByName('adress')[0].value,
-            "work-hours-1"    : document.getElementsByName('working-hours-row-first')[0].value,
-            "work-hours-2"    : document.getElementsByName('working-hours-row-second')[0].value,
+            "workHoursFirst"  : document.getElementsByName('working-hours-row-first')[0].value,
+            "workHoursSecond" : document.getElementsByName('working-hours-row-second')[0].value,
             "insta"           : document.getElementsByName('insta')[0].value,
-            "vk "             : document.getElementsByName('vk')[0].value,
-            "twitch "         : document.getElementsByName('twitch')[0].value,
+            "vk"             : document.getElementsByName('vk')[0].value,
+            "twitch"         : document.getElementsByName('twitch')[0].value,
             "yt"              : document.getElementsByName('yt')[0].value
         }
     }

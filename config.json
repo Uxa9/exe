@@ -2,16 +2,5 @@
     "ServerPort"    : 4000,
 
     "login"         : "admin",
-    "password"      : "$2a$12$.32MAolNDBJGmTtv9cuHGeaP44Qj6yXSPxxXHI3C9T/oj8qKu1OFi",
-
-    "textFields" : {
-        "phone"         : "+7 (965) 347-54-45",
-        "adress"        : "Профсоюзная улица, 104",
-        "work-hours-1"  : "Пн-чт: 14:00-23:00",
-        "work-hours-2"  : "Пт-вс: 14:00-23:00",
-        "insta"         : "https://www.instagram.com/exe.gaming.msk/",
-        "vk"            : "https://vk.com/msk.exegaming",
-        "twitch"        : "https://www.twitch.tv/exe_gaming_msk",
-        "yt"            : "https://www.youtube.com/channel/UCHBVipFWUmg9kpEmy0urXBg/featured"
-    }
+    "password"      : "$2a$12$.32MAolNDBJGmTtv9cuHGeaP44Qj6yXSPxxXHI3C9T/oj8qKu1OFi"
 }

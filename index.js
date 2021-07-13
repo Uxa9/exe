@@ -51,7 +51,8 @@ app.post("/settings", async (req, res) => {
     });
 
     res.render("admin", {
-        imgArr : imagesArray
+        imgArr  : imagesArray,
+        textArr : config.textFields
     });
 });
 
@@ -64,6 +65,15 @@ app.post("/login", async (req, res) => {
 
         res.status(200).json({ message : "Ok" });
     } else res.status(400).json({ message : "Неверный логин" });
+});
+
+app.post("/updateText", async (req, res) => {
+    try {
+        config.textFields = req.body.textFields;
+        res.send(200);
+    } catch (e) {
+        res.send(400);
+    }
 });
 
 app.post("/uploadImages", upload.single("image"), (req, res) => {

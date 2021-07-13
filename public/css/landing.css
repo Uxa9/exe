@@ -678,7 +678,8 @@ nav {
       .contacts-screen .contacts-screen__content .map {
         margin-top: 20px;
         width: 80vw;
-        height: 30vh; } }
+        height: 30vh;
+        min-height: 300px; } }
 
 @media screen and (max-width: 400px) {
   .first-screen .main-image {

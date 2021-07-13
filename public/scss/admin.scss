@@ -208,6 +208,37 @@ body {
 
 .text {
     display: none;
+    width: 100%;
+    .text__content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+        .contacts, .links {
+            display: flex;
+            flex-flow: column nowrap;
+            label {
+                color: black;
+                margin: 15px 0px;
+            }
+
+            input {
+                height: 40px;
+                width: 250px;
+                margin: 5px 0px;
+                color: black;
+                font-size: 18px;
+                text-indent: 15px;
+            }
+        }
+    }
+
+    button {
+        margin-top: 30px;
+        width: 250px;
+        height: 50px;
+        justify-self: center;
+    }
 }
 
 @media screen and (max-width: 350px) {

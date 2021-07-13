@@ -40,7 +40,28 @@
         </div>
     </div>
     <div id="text" class="text">
-        А что тут?
+        <div class="text__content">
+            <div class="contacts">
+                <label for="phone">Телефон</label>
+                <input type="text" name="phone" value="{{textArr.phone}}">
+                <label for="adress">Адрес</label>
+                <input type="text" name="adress" value="{{textArr.adress}}">
+                <label for="working-hours">Рабочие часы</label>
+                <input type="text" name="working-hours-row-first" value="{{textArr.work-hours-1}}">
+                <input type="text" name="working-hours-row-second" value="{{textArr.work-hours-2}}">
+            </div>
+            <div class="links">
+                <label for="insta">instagram</label>
+                <input type="text" name="insta" value="{{textArr.insta}}">
+                <label for="vk">vk</label>
+                <input type="text" name="vk" value="{{textArr.vk}}">
+                <label for="twitch">twitch</label>
+                <input type="text" name="twitch" value="{{textArr.twitch}}">
+                <label for="yt">youtube</label>
+                <input type="text" name="yt" value="{{textArr.yt}}">
+            </div>
+        </div>
+        <button id="saveText" class="button" type="button" name="button">Сохранить</button>
     </div>
 </div>
 

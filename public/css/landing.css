@@ -60,7 +60,6 @@ nav {
       align-items: center;
       padding: 0px 10px;
       position: relative;
-      color: #513E49;
       text-decoration: none;
       transition: background-color .5s, color .5s; }
       nav .nav-links a:before {
@@ -78,7 +77,6 @@ nav {
         opacity: 0;
         transition: opacity .1s; }
       nav .nav-links a:hover {
-        color: white;
         background-color: #513E49; }
         nav .nav-links a:hover:before {
           opacity: 1; }
@@ -145,17 +143,22 @@ nav {
         .first-screen .firstScreen__content .trapezoid-button:hover .button-skewed {
           box-shadow: 10px 0px 15px 2px #FF2975; }
   .first-screen .main-image {
-    max-width: 30%;
     height: 90%;
     position: absolute;
     bottom: 0px;
-    right: 15%; }
+    right: 5%; }
     .first-screen .main-image img {
       position: relative;
       height: 100%;
       z-index: 999; }
     .first-screen .main-image .glitch {
-      position: absolute; }
+      position: absolute;
+      width: 160px;
+      height: 95px;
+      bottom: 74.5%;
+      right: 50.5%;
+      transform: translate(50%, 0%) rotate(-2deg);
+      z-index: 1000; }
   .first-screen .parallelograms {
     position: absolute;
     bottom: 1px;
@@ -221,19 +224,22 @@ nav {
         text-align: right;
         padding: 0 30px; }
         .offers-screen .offers .offers__offer .offers__offer__text p {
-          display: flex;
-          justify-content: flex-end; }
+          position: relative; }
           .offers-screen .offers .offers__offer .offers__offer__text p:first-child {
             font-size: 2em;
             padding-bottom: 20px; }
+          .offers-screen .offers .offers__offer .offers__offer__text p strong {
+            font-size: 1.1em; }
           .offers-screen .offers .offers__offer .offers__offer__text p:not(:nth-child(1)) {
             font-size: 0.8em;
             color: #ff2975;
-            margin-bottom: 15px; }
+            margin-bottom: 15px;
+            padding-left: 15px; }
             .offers-screen .offers .offers__offer .offers__offer__text p:not(:nth-child(1)):before {
               display: block;
               content: "— ";
-              margin-right: 3px; }
+              position: absolute;
+              left: -7px; }
   .offers-screen .parallelograms-pink {
     position: absolute;
     top: -150px;
@@ -379,30 +385,38 @@ nav {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
   position: relative; }
   .streamer-screen h2 {
     font-size: 2.5em;
-    width: 60%; }
+    width: 60%;
+    text-align: center; }
   .streamer-screen .streamer-screen__content {
-    margin-top: 100px;
     display: flex;
-    align-items: flex-end;
-    justify-content: center; }
+    flex-flow: column nowrap;
+    align-items: center; }
     .streamer-screen .streamer-screen__content button {
       width: 300px;
-      height: 50px; }
+      height: 50px;
+      margin-top: 50px;
+      margin-bottom: 5vw;
+      order: 2; }
     .streamer-screen .streamer-screen__content .video {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 40%;
-      margin-left: 30px;
+      min-width: 600px;
+      min-height: 300px;
+      max-width: 70%;
+      max-height: 40%;
+      margin-top: 40px;
       background: -webkit-linear-gradient(180deg, #A30E43 0%, #FF2975 100%);
       padding: 3px;
       border-radius: 32px; }
       .streamer-screen .streamer-screen__content .video video {
         width: 100%;
-        border-radius: 30px; }
+        border-radius: 30px;
+        -webkit-mask-image: -webkit-radial-gradient(white, black); }
   .streamer-screen .parallelograms-pink {
     position: absolute;
     top: -50px;
@@ -467,7 +481,8 @@ nav {
         height: 100%;
         width: 100%;
         border-radius: 32px;
-        overflow: hidden; }
+        overflow: hidden;
+        -webkit-mask-image: -webkit-radial-gradient(white, black); }
   .contacts-screen .parallelograms-pink {
     position: absolute;
     top: -100px;
@@ -603,6 +618,9 @@ nav {
       height: 50vh;
       max-width: none;
       right: auto; }
+      .first-screen .main-image .glitch {
+        width: 90px;
+        height: 50px; }
     .first-screen .parallelograms {
       bottom: -10%;
       left: 10%; }
@@ -643,20 +661,18 @@ nav {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr); }
   .streamer-screen h2 {
-    font-size: 1em !important;
-    text-align: left; }
-  .streamer-screen .streamer-screen__content {
-    margin-top: 40px;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center; }
-    .streamer-screen .streamer-screen__content button {
-      margin-top: 50px;
-      order: 2; }
-    .streamer-screen .streamer-screen__content .video {
-      width: 90%;
-      padding: 5px;
-      margin: 0; }
+    font-size: 1.5em !important;
+    text-align: left;
+    width: 80%; }
+  .streamer-screen .streamer-screen__content button {
+    margin-top: 50px;
+    order: 2; }
+  .streamer-screen .streamer-screen__content .video {
+    min-width: auto;
+    min-height: auto;
+    width: 90%;
+    padding: 5px;
+    margin: 0; }
   .contacts-screen {
     max-height: none !important; }
     .contacts-screen .contacts-screen__content {
@@ -689,7 +705,10 @@ nav {
   .first-screen {
     height: auto; }
     .first-screen .firstScreen__content {
-      margin-top: 90px; } }
+      margin-top: 90px; }
+    .first-screen .main-image .glitch {
+      width: 24vw;
+      height: 12vw; } }
 
 @media screen and (max-width: 700px) {
   nav .burger {

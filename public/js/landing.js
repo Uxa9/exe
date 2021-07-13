@@ -51,3 +51,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.getElementById('reserveButton').onclick = () => {
+	window.open("https://www.instagram.com/exe.gaming.msk/");
+}
+
+document.getElementById('streamerButton').onclick = () => {
+	window.open("https://www.twitch.tv/exe_gaming_msk");
+}
+
+
+document.getElementById('menu').querySelectorAll("a").forEach((link) => {
+	link.onclick = () => {
+		document.getElementById('burgerButton').click();
+	}
+});

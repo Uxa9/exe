@@ -1,4 +1,23 @@
-<nav>
+<nav role="navigation">
+    <div id="menuToggle" class="burger">
+        <input type="checkbox" id="burgerButton" />
+
+        <div class="burger-spans">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="menu">
+            <li class="menu">Меню</li>
+            <a href="#firstScreen"><li>Главная</li></a>
+            <a href="#offersScreen"><li>Услуги</li></a>
+            <a href="#galleryScreen"><li>Галерея</li></a>
+            <a href="#streamerScreen"><li>Стриминг</li></a>
+            <a href="#contactsScreen"><li>Контакты</li></a>
+        </ul>
+    </div>
+
     <a href="/">
         <img src="/img/landing/logo.svg" alt="lounge logo">
     </a>
@@ -19,7 +38,7 @@
                 <img src="/img/landing/logo.svg" alt="lounge logo">
             </p>
         </h1>
-        <button class="button trapezoid-button" type="button" name="button">
+        <button class="button trapezoid-button" id="reserveButton" type="button" name="button">
             <span>
                 Забронировать место
             </span>
@@ -90,25 +109,27 @@
 </section>
 <section id="galleryScreen" class="gallery-screen">
     <h2>Галерея</h2>
-    <div class="items">
-        {{#each imgArr}}
-            <div class=" item">
-                <img src="{{this.imgPath}}" alt="image">
-            </div>
-        {{/each}}
-		<div class="button-container">
-			<div class="gallery-button">
-                <div class="arrow">
-
+    <div class="items-wrapper">
+        <div class="items">
+            {{#each imgArr}}
+                <div class=" item">
+                    <img src="{{this.imgPath}}" alt="image">
                 </div>
-            </div>
-			<div class="gallery-button">
-                <div class="arrow">
+            {{/each}}
+    		<div class="button-container">
+    			<div class="gallery-button">
+                    <div class="arrow">
 
+                    </div>
                 </div>
-            </div>
-		</div>
-	</div>
+    			<div class="gallery-button">
+                    <div class="arrow">
+
+                    </div>
+                </div>
+    		</div>
+    	</div>
+    </div>
     <div class="parallelograms-pink">
         <div class="parallelogram parallelogram-pink parallelogram-big">
 
@@ -119,9 +140,9 @@
     </div>
 </section>
 <section id="streamerScreen" class="streamer-screen">
-    <h2>Хотите стать стримером или уже ведете трансляции? Станьте нашим партнером?</h2>
+    <h2>Хотите стать стримером или уже ведете трансляции? Станьте нашим партнером!</h2>
     <div class="streamer-screen__content">
-        <button class="button" type="button" name="button">Присоединиться</button>
+        <button class="button" id="streamerButton" type="button" name="button">Присоединиться</button>
         <div class="video">
             <video src="/video/video.mp4" controls>
 

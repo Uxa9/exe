@@ -36,7 +36,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 999999;
@@ -143,6 +143,9 @@ nav {
         .first-screen .firstScreen__content .trapezoid-button:hover .button-skewed {
           box-shadow: 10px 0px 15px 2px #FF2975; }
   .first-screen .main-image {
+    display: flex;
+    justify-content: center;
+    width: 50%;
     height: 90%;
     position: absolute;
     bottom: 0px;
@@ -153,8 +156,8 @@ nav {
       z-index: 999; }
     .first-screen .main-image .glitch {
       position: absolute;
-      width: 160px;
-      height: 95px;
+      width: 22vh;
+      height: 12.5vh;
       bottom: 74.5%;
       right: 50.5%;
       transform: translate(50%, 0%) rotate(-2deg);
@@ -439,13 +442,13 @@ nav {
   flex-flow: column nowrap;
   align-items: center;
   margin-bottom: 0;
-  padding-bottom: 80px;
   background: linear-gradient(90deg, #33282F 0%, #241B20 100%);
   border-radius: 50px 50px 0 0;
   position: relative; }
   .contacts-screen .contacts-screen__content {
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
     min-height: 500px; }
     .contacts-screen .contacts-screen__content .contacts-screen__content__info-and-links {
       margin-right: 100px;
@@ -697,18 +700,14 @@ nav {
         height: 30vh;
         min-height: 300px; } }
 
-@media screen and (max-width: 400px) {
-  .first-screen .main-image {
-    max-width: none; } }
-
 @media screen and (max-height: 700px) {
   .first-screen {
     height: auto; }
     .first-screen .firstScreen__content {
       margin-top: 90px; }
     .first-screen .main-image .glitch {
-      width: 24vw;
-      height: 12vw; } }
+      width: 11vw;
+      height: 6vw; } }
 
 @media screen and (max-width: 700px) {
   nav .burger {
@@ -797,3 +796,8 @@ nav {
     transform: none; }
   nav .nav-links {
     display: none; } }
+
+@media screen and (max-height: 700px), screen and (max-width: 990px) {
+  .first-screen .main-image .glitch {
+    width: 12vh;
+    height: 7vh; } }
